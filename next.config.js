@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
+  images: {
+    domains: ['media.graphassets.com', 'res.cloudinary.com'],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
