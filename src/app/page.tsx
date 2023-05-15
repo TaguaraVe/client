@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function Home() {
   return (
     <main className="gradient flexS flex-col min-h-[calc(100vh-var(--header-height)-var(--footer-height))]">
