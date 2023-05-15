@@ -1,27 +1,27 @@
-import { revalidatePath } from 'next/cache';
+// import { revalidatePath } from 'next/cache';
 
-type Todo = {
-  id: string;
-  descrition: string;
-};
+// type Todo = {
+//   id: string;
+//   descrition: string;
+// };
 
-const todos: Todo[] = [{ id: 'uno', descrition: 'Learn Server Actions' }];
+// const todos: Todo[] = [{ id: 'uno', descrition: 'Learn Server Actions' }];
 
 export default function About() {
-  const addTodo = async (data: FormData) => {
-    'use server';
-    const todo = data.get('todo') as string;
-    todos.push({ id: todos.length + 'dos', descrition: todo });
-    revalidatePath('/about');
-    console.log('Tofos', todos);
-  };
+  // const addTodo = async (data: FormData) => {
+  //   'use server';
+  //   const todo = data.get('todo') as string;
+  //   todos.push({ id: todos.length + 'dos', descrition: todo });
+  //   revalidatePath('/about');
+  //   console.log('Tofos', todos);
+  // };
 
   return (
     <main className="gradient flexS flex-col min-h-[calc(100vh-var(--header-height)-var(--footer-height))]">
       <h1 className="title mt-20">Taguara Digital</h1>
       <h1 className="subtitle text-white">About Page</h1>
 
-      <ul>
+      {/* <ul>
         {todos.map((todo) => (
           <li key={todo.id}>{todo.descrition}</li>
         ))}
@@ -38,7 +38,7 @@ export default function About() {
         >
           Add Todo
         </button>
-      </form>
+      </form> */}
     </main>
   );
 }

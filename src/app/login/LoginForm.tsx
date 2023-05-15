@@ -2,20 +2,19 @@ import { revalidatePath } from 'next/cache';
 import Link from 'next/link';
 
 export default function LoginForm() {
-  async function handleSubmit(values: FormData) {
-    'use server';
-    const userName = values.get('userName') as string;
-    const password = values.get('password') as string;
-    revalidatePath('/login');
-    console.log('Nombre', userName, password);
-    // ...
-  }
+  // async function handleSubmit(values: FormData) {
+  //   const userName = values.get('userName') as string;
+  //   const password = values.get('password') as string;
+  //   revalidatePath('/login');
+  //   console.log('Nombre', userName, password);
+  //   // ...
+  // }
 
   return (
     <article className="w-full max-w-md relative flexC flex-col flex-1 mx-auto">
       <h1 className="title text-center mb-12">BlueBank</h1>
       <form
-        action={handleSubmit}
+        // action={handleSubmit}
         className="w-full max-w-sm mx-auto text-center "
       >
         <div className="relative py-0  mx-auto mb-4 flex flex-col w-full">
